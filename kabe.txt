@@ -1,0 +1,10 @@
+learners 0
+fighters -54
+fruits 51
+bandages 40
+coke 0
+meat 60
+cream 80
+smoking -70
+unprotectedsex -97
+junkfood -3
