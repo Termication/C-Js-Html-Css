@@ -33,5 +33,5 @@ int main(){
 
     root->left->right->left = createNode(9);
     root->right->right->left = createNode(15);
-
+    printTree(root);
 }
