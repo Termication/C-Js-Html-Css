@@ -25,7 +25,10 @@ int main(void){
 
     }while(answer != guess);
 
-    printf("You guessed %d times ", guesses);
+    printf("\nThe answer is: %d ", answer);
+    printf("\n");
+    printf("\nYou guessed %d times ", guesses);
+    
 
 
 }
