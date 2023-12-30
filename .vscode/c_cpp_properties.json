@@ -3,8 +3,6 @@
         {
             "name": "Win32",
             "includePath": [
-                "c:/raylib/raylib/src",
-                "c:/raylib/mingw64/include",
                 "${workspaceFolder}/**"
             ],
             "defines": [

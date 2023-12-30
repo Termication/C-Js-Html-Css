@@ -1,4 +1,3 @@
-#include <c:/raylib/mingw64/include/raylib.h>
 #include "c:/raylib/raylib/src/raylib.h"
 
 int main() {
