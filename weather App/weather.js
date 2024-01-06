@@ -20,9 +20,11 @@ const debouncedSearch = _.debounce(() => {
 async function showWeather(lat, lon, name){
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`);
     const data = await response.json();
-    console.log(data);
-    
-}
+    const temp = data.main.temp;
+    const feelslike = data.main.feels_like;
+    const humidity = data.main.humidity;
+    const wind = data.main.speed;
+    const icon = data.weather[0].icon;
 
 document.querySelector('input[type="text"]').addEventListener('keyup', debouncedSearch);
 
