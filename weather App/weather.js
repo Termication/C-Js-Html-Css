@@ -34,7 +34,7 @@ async function showWeather(lat, lon, name){
     //document.getElementById('icon').src = `https://openweathermap.org/img/wn/10@2x.png`;
   
     // Update background image based on weather condition
-    const body = document.body;
+    /*const body = document.body;
     switch (weatherCondition) {
         case 'clear':
             body.style.backgroundImage = 'url("sunny.jpg")';
@@ -49,7 +49,7 @@ async function showWeather(lat, lon, name){
         default:
             body.style.backgroundImage = ''; // Clear background image for other conditions
             break;
-    }
+    }*/
     document.querySelector('form').style.display = 'none';
     document.getElementById('weather').style.display = 'block';
 
