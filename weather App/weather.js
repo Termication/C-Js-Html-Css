@@ -2,7 +2,7 @@ const key = '9f4c1fcdecc54ff62573c3763650ee8c';
 
 async function search(){
     const phrase = document.querySelector('input[type="text"]').value;
-    //console.log(phrase);
+    
     const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${phrase}&limit=5&appid=${key}`);
     const data = await response.json();
     const ul = document.querySelector('form ul');
@@ -17,7 +17,10 @@ const debouncedSearch = _.debounce(() => {
     search();
 }, 600);
 
-function showWeather(lat, lon, name){
+async function showWeather(lat, lon, name){
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`);
+    const data = await response.json();
+    console.log(data);
     
 }
 
