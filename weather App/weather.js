@@ -4,7 +4,7 @@ async function search(){
     const phrase = document.querySelector('input[type="text"]').value;
     //console.log(phrase);
     const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${phrase}&limit=5&appid=${key}`);
-    const data = await Response.json();
+    const data = await response.json();
     console.log(data);
 }
 const debouncedSearch = _.debounce(() => {
