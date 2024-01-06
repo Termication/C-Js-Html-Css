@@ -26,6 +26,17 @@ async function showWeather(lat, lon, name){
     const wind = data.main.speed;
     const icon = data.weather[0].icon;
 
+    document.getElementById('city').innerHTML = name; 
+    document.getElementById('degrees').innerHTML = temp + `&deg;C`;
+    document.getElementById('feelslikeValue').innerHTML = feelslike + `&deg;C`; 
+    document.getElementById('windValue').innerHTML = wind + `km/h`;
+    document.getElementById('humidityValue').innerHTML = humidity + `%`;
+  /*  document.getElementById(elementId: 'icon').src = `http://openweathermap.org/img/wn/10d@4x.png`;
+    document.querySelector(selectors: 'form').style.display = 'none';
+    document.getElementById(elementId: 'weather').style.display = 'block';
+    */
+    
+}
 document.querySelector('input[type="text"]').addEventListener('keyup', debouncedSearch);
 
 
