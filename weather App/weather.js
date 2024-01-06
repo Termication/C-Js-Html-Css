@@ -32,9 +32,27 @@ async function showWeather(lat, lon, name){
     document.getElementById('windValue').innerHTML = wind + `km/h`;
     document.getElementById('humidityValue').innerHTML = humidity + `%`;
     //document.getElementById('icon').src = `https://openweathermap.org/img/wn/10@2x.png`;
+  
+    // Update background image based on weather condition
+    const body = document.body;
+    switch (weatherCondition) {
+        case 'clear':
+            body.style.backgroundImage = 'url("sunny.jpg")';
+            break;
+        case 'snow':
+        case 'clouds':
+            body.style.backgroundImage = 'url("freezing.jpg")';
+            break;
+        case 'wind':
+            body.style.backgroundImage = 'url("windy.jpg")';
+            break;
+        default:
+            body.style.backgroundImage = ''; // Clear background image for other conditions
+            break;
+    }
     document.querySelector('form').style.display = 'none';
     document.getElementById('weather').style.display = 'block';
-    
+
 }
 document.querySelector('input[type="text"]').addEventListener('keyup', debouncedSearch);
 
