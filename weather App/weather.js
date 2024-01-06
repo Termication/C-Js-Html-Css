@@ -17,4 +17,18 @@ const debouncedSearch = _.debounce(() => {
     search();
 }, 600);
 
+function showWeather(lat, lon, name){
+    
+}
+
 document.querySelector('input[type="text"]').addEventListener('keyup', debouncedSearch);
+
+
+document.body.addEventListener('click', ev => {
+        const li = ev.target;
+        const {lat,lon,name} = li.dataset;
+        if(!lat){
+            return;
+        }
+        showWeather(lat, lon, name);
+});
