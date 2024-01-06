@@ -9,8 +9,8 @@ async function search(){
     // acess data from api and let it pop when searching
     ul.innerHTML = '';
     for(let i = 0; i < data.length; i++){
-        const item = data[i];
-        ul.innerHTML += `<li>${item.name}</li>`;
+        const {name, lat, lon, country} = data[i];
+            ul.innerHTML += `<li data-lat="${lat}" data-lon="${lon}" data-name="${name}">${name} <span>${country}</span></li>`;
     }
 }
 const debouncedSearch = _.debounce(() => {
