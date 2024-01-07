@@ -62,6 +62,10 @@ document.querySelector('input[type="text"]').addEventListener('keyup', debounced
 document.body.addEventListener('click', ev => {
         const li = ev.target;
         const {lat,lon,name} = li.dataset;
+        //system to remember last city entered
+        localStorage.setItem('lat', lat);
+        localStorage.setItem('lon', lon);
+        localStorage.setItem('name' name);
         if(!lat){
             return;
         }
