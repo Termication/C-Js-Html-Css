@@ -20,17 +20,19 @@ const debouncedSearch = _.debounce(() => {
 async function showWeather(lat, lon, name){
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`);
     const data = await response.json();
-    const temp = data.main.temp;
-    const feelslike = data.main.feels_like;
+    const temp = Math.round(data.main.temp);
+    const feelslike = Math.round(data.main.feels_like);
     const humidity = data.main.humidity;
-    const wind = data.main.speed;
+    const wind = Math.round(data.wind.speed);
     const icon = data.weather[0].icon;
+
+    console.log(data);
 
     document.getElementById('city').innerHTML = name;
     document.getElementById('degrees').innerHTML = temp + `&deg;C`;
-    document.getElementById('feelslikeValue').innerHTML = feelslike + `&deg;C`;
-    document.getElementById('windValue').innerHTML = wind + `km/h`;
-    document.getElementById('humidityValue').innerHTML = humidity + `%`;
+    document.getElementById('feelslikeValue').innerHTML = feelslike + '<span>&deg;C<span></span>';
+    document.getElementById('windValue').innerHTML = wind + '<span>km/h<span></span>';
+    document.getElementById('humidityValue').innerHTML = humidity + `<span>%<span></span>`;
     //document.getElementById('icon').src = `https://openweathermap.org/img/wn/10@2x.png`;
   
     // Update background image based on weather condition
