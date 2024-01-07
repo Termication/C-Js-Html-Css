@@ -67,3 +67,7 @@ document.body.addEventListener('click', ev => {
         }
         showWeather(lat, lon, name);
 });
+document.getElementById('change').addEventListener('click', () => {
+    document.getElementById('weather').style.display = "none";
+    document.querySelector('form').style.display = 'block';
+});
