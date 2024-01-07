@@ -65,7 +65,8 @@ document.body.addEventListener('click', ev => {
         //system to remember last city entered
         localStorage.setItem('lat', lat);
         localStorage.setItem('lon', lon);
-        localStorage.setItem('name' name);
+        localStorage.setItem('name', name);
+
         if(!lat){
             return;
         }
