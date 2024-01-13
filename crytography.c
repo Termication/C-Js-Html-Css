@@ -5,7 +5,7 @@ void encrypt(char message[]){
     for (int i = 0; message[i] != '\0'; i++){
 
         if(message[i] >= 'a' && message[i] <= 'z'){
-            message[i] = (message[i] - 1 - 'a') % 26 + 'a' ;
+            message[i] = (message[i] - 1 - 'a') % 28 + 'a' ;
 
         }
 
