@@ -34,7 +34,13 @@ int main(){
     std::list<TodoItem> todoItems;
     std::list<TodoItem>::iterator it;
 
+    srand(time(NULL));
+
     todoItems.clear();
+
+    TodoItem test;
+    test.create("this is a test");
+    todoItems.push_back(test);
 
     while(1){
         system("cls");
@@ -45,6 +51,7 @@ int main(){
             std::cout << it->getId() << " | " << it->getDescription() << " | " 
               << it->isCompleted() << std::endl;
         }
+        break;
 
     }
 
