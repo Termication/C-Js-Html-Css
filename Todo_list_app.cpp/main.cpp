@@ -29,7 +29,7 @@ class TodoItem{
 };
 
 int main(){
-    
+    char input_option;
     std::string version = "v0.0.2";
     std::list<TodoItem> todoItems;
     std::list<TodoItem>::iterator it;
@@ -60,7 +60,13 @@ int main(){
         std::cout << "[c]omplete a Todo" << std::endl;
         std::cout << "[q]uit" << std::endl;
 
-        std::cout << "choice: "
+        std::cout << "choice: " << std::endl;
+
+        std::cin >> input_option;
+
+        if(input_option == 'q' ){
+            std::cout << "Thank You, Have Wonderful Day! " << std::endl;
+        }
         break;
 
     }
