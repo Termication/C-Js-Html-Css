@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include <ctime>
 
 class TodoItem{
 
@@ -13,9 +14,17 @@ class TodoItem{
         TodoItem() : id(0), description(""), completed(false) {}
         ~TodoItem() = default;
 
-    int getId(){return id; }
-    std::string getDescription(){return description; }
-    bool isCompleted(){return completed; }
+        bool create(std::string new_description){
+            //generate a random integer between 1 and 100
+            id = rand() % 100 + 1;
+            description = new_description;
+            return true;
+
+        }
+
+        int getId(){return id; }
+        std::string getDescription(){return description; }
+        bool isCompleted(){return completed; }
 
 };
 
