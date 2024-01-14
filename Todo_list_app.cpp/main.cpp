@@ -38,9 +38,9 @@ int main(){
 
     todoItems.clear();
 
-    TodoItem test;
-    test.create("this is a test");
-    todoItems.push_back(test);
+    //TodoItem test;
+    //test.create("this is a test");
+    //todoItems.push_back(test);
 
     while(1){
         system("cls");
@@ -52,6 +52,15 @@ int main(){
             std::cout << it->getId() << " | " << it->getDescription() << " | " 
               << completed << std::endl;
         }
+        if (todoItems.empty()){
+            std::cout << "Add your Todo!" << std::endl;
+        }
+
+        std::cout << "[a]dd a new Todo" << std::endl;
+        std::cout << "[c]omplete a Todo" << std::endl;
+        std::cout << "[q]uit" << std::endl;
+
+        std::cout << "choice: "
         break;
 
     }
