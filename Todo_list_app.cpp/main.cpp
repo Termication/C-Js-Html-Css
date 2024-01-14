@@ -74,6 +74,7 @@ int main(){
         else if(input_option == 'a' || input_option == 'A'){
             std::cout << "Add a new description" << std::endl;
             std::cin.clear();
+            std::cin.ignore();
             std::getline(std::cin, input_description);
 
             TodoItem newItem;
@@ -91,7 +92,7 @@ int main(){
                 }
         }
         }
-        break;
+        
 
     }
 
