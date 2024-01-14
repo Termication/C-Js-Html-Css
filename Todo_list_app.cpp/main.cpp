@@ -20,3 +20,13 @@ int main(){
     
     std::string version = "v0.0.2";
     std::list<TodoItem> todoItems;
+
+    todoItems.clear();
+
+    while(1){
+        system("cls");
+        std::cout << "Todo List Maker - " << version << std::endl;
+        std::endl << std::endl;
+    }
+
+}
