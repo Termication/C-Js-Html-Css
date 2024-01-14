@@ -33,6 +33,7 @@ class TodoItem{
 int main(){
     char input_option;
     int input_id;
+    std::string input_description;
     std::string version = "v0.0.2";
     std::list<TodoItem> todoItems;
     std::list<TodoItem>::iterator it;
@@ -70,6 +71,15 @@ int main(){
         if(input_option == 'q' || input_option == 'Q'){
             std::cout << "Thank You, Have Wonderful Day! " << std::endl;
         }
+        else if(input_option == 'a' || input_option == 'A'){
+            std::cout << "Add a new description" << std::endl;
+            std::cin.clear();
+            std::getline(std::cin, input_description);
+
+            TodoItem newItem;
+            newItem.create(input_description);
+            todoItems.push_back(newItem);
+        }
         else if(input_option == 'c' || input_option == 'C'){
             std::cout << "Enter id to mark completed" << std::endl;
             std::cin >> input_id;
@@ -78,7 +88,6 @@ int main(){
                 if(input_id == it->getId()){
                     it->setCompleted(true);
                     break;
-                    
                 }
         }
         }
