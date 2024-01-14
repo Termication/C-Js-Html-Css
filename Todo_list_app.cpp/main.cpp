@@ -13,6 +13,9 @@ class TodoItem{
         TodoItem() : id(0), description(""), completed(false) {}
         ~TodoItem() = default;
 
+    int getId(){return id; }
+    std::string getDescription(){return description; }
+    bool isCompleted(){return completed; }
 
 };
 
