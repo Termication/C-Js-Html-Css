@@ -48,8 +48,9 @@ int main(){
         std::cout << std::endl << std::endl;
 
         for (it = todoItems.begin(); it != todoItems.end(); it++){
+            std::string completed = it->isCompleted() ? "done" : "not done";
             std::cout << it->getId() << " | " << it->getDescription() << " | " 
-              << it->isCompleted() << std::endl;
+              << completed << std::endl;
         }
         break;
 
