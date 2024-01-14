@@ -60,6 +60,8 @@ int main(){
             std::cout << "Add your Todo!" << std::endl;
         }
 
+        std::cout << std::endl << std::endl;
+
         std::cout << "[a]dd a new Todo" << std::endl;
         std::cout << "[c]omplete a Todo" << std::endl;
         std::cout << "[q]uit" << std::endl;
