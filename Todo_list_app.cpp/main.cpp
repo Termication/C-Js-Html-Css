@@ -19,7 +19,6 @@ class TodoItem{
             id = rand() % 100 + 1;
             description = new_description;
             return true;
-
         }
 
         int getId(){return id; }
