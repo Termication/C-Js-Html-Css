@@ -85,7 +85,7 @@ int main() {
                 printf("Exiting the program. Goodbye!\n");
                 break;
             default:
-                printf("Invalid choice. Please enter a valid option.\n");
+                printf("Invalid choice. Please enter a valid option...\n");
         }
     } while (choice != 4);
 
