@@ -1,18 +1,19 @@
 
 function generate(){
     let dictionary = '';
-    if (document.getElementById(lowercaseCb).checked){
+    if (document.getElementById('lowercaseCb').checked) {
         dictionary += 'qwertyuiopasdfghjklzxcvbnm';
     }
-    if (document.getElementById(uppercaseCb).checked){
+    if (document.getElementById('uppercaseCb').checked) {
         dictionary += 'QWERTYUIOPASDFGHJKLZXCVBNM';
     }
-    if (document.getElementById(digitsCb).checked){
+    if (document.getElementById('digitsCb').checked) {
         dictionary += '0123456789';
     }
-    if (document.getElementById(specialsCb).checked){
+    if (document.getElementById('specialsCb').checked) {
         dictionary += ' !@#$%^&*()_-+={};<>:';
     }
+
 
     const length = document.querySelector('input[type="range"]').value;
 
@@ -27,5 +28,7 @@ function generate(){
 
     document.querySelector('input[type="text"]').value = password;
 }
+
+
 
 generate();
