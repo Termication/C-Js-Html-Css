@@ -18,6 +18,7 @@ div.password{
 }
 div.password input{
     padding: 7px 10px;
+    border-radius: 10px;
     background-color: #3282B8;
     border: 0;
 }
@@ -63,4 +64,25 @@ div.password button{
     border-radius: 10px;
     display: flexbox;
     width: 50px;
+    background-color: #006fb9;
+}
+
+div.range{
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+}
+div.range span{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    margin-left: 20px;
+    min-width: 30px;
+    text-align: center;
+}
+div.options{
+    margin-bottom: 20px;
+}
+div.options label{
+    display: block;
+    background-color: rgba(2,0,36,1);
 }
