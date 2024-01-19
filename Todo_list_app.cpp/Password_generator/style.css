@@ -23,11 +23,7 @@ div.password input{
 }
 
 
-<!-- HTML !-->
-<button class="button-64" role="button"><span class="text">Button 64</span></button>
-
-/* CSS */
-.button-64 {
+.generate {
   align-items: center;
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
   border: 0;
@@ -37,41 +33,42 @@ div.password input{
   color: #FFFFFF;
   display: flex;
   font-family: Phantomsans, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   justify-content: center;
   line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 3px;
+  max-width: 50%;
+  min-width: 50px;
+  padding: 4px;
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+  margin-bottom: 50;
 }
 
-.button-64:active,
-.button-64:hover {
+.generate:active,
+.generate:hover {
   outline: 0;
 }
 
-.button-64 span {
+.generate span {
   background-color: rgb(5, 6, 45);
   padding: 16px 24px;
   border-radius: 6px;
   width: 100%;
-  height: 100%;
+  height: 10%;
   transition: 300ms;
 }
 
-.button-64:hover span {
+.generate:hover span {
   background: none;
 }
 
-@media (min-width: 768px) {
-  .button-64 {
-    font-size: 24px;
-    min-width: 196px;
+@media (min-width: 10px) {
+  .generate {
+    font-size: 30px;
+    min-width: 10px;
   }
 }
