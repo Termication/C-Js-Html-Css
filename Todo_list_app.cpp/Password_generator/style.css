@@ -1,0 +1,11 @@
+body{
+    background-color: #18262C;
+    color: blanchedalmond;
+}
+.generator{
+    background-color: #0f4c75;
+    width: 400px;
+    margin: 150px auto;
+    padding: 20px;
+    border-radius: 20px;
+}
