@@ -46,6 +46,7 @@ document.querySelector('div.password button').addEventListener('click', () => {
         setTimeout(() => {
             document.querySelector('div.password button').innerHTML = 'copy';
         }, 1000);
+        
     });
 });
 
