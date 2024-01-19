@@ -80,9 +80,15 @@ div.range span{
     text-align: center;
 }
 div.options{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 div.options label{
     display: block;
-    background-color: rgba(2,0,36,1);
+    background-color: rgba(2,0,36,.2);
+    padding: 8px;
+    border-radius: 10px;
+
 }
