@@ -84,6 +84,7 @@ div.options label{
     padding: 8px;
     border-radius: 10px;
     cursor: pointer;
+    
 
 }
 
@@ -102,7 +103,7 @@ div.options label{
   font-family: "Amazon Ember",Arial,sans-serif;
   font-size: 14px;
   height: 20px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: bold;
   text-transform: uppercase;
   outline: 0;
@@ -127,7 +128,8 @@ div.options label{
 }
 
 .copy:hover {
-  border-color: #0066ff #0032a7 #001a44;
+  border-color: #0066ff #0032a7 #0b2144;
+
 }
 
 .copy:focus {

@@ -14,6 +14,7 @@ function generate(){
         dictionary += ' !@#$%^&*()_-+={};<>:';
     }
 
+    
 
     const length = document.querySelector('input[type="range"]').value;
 
@@ -46,7 +47,7 @@ document.querySelector('div.password button').addEventListener('click', () => {
         setTimeout(() => {
             document.querySelector('div.password button').innerHTML = 'copy';
         }, 1000);
-        
+
     });
 });
 
