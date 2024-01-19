@@ -34,6 +34,7 @@ function generate(){
 });
 
 document.querySelector('input[type="range"]').addEventListener('input', () => {
+    document.querySelector('div.range span').innerHTML = document.querySelector('input[type="range"]').value;
     generate();
 });
 
