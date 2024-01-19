@@ -29,6 +29,14 @@ function generate(){
     document.querySelector('input[type="text"]').value = password;
 }
 
+[...document.querySelectorAll('input[type="checkbox"], button.generate')].forEach(elem => {
+    elem.addEventListener('click', generate);
+});
+
+document.querySelector('input[type="range"]').addEventListener('input', () => {
+    generate();
+});
+
 
 
 generate();
