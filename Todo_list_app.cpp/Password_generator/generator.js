@@ -38,6 +38,17 @@ document.querySelector('input[type="range"]').addEventListener('input', () => {
     generate();
 });
 
+document.querySelector('div.password button').addEventListener('click', () => {
+    const pass = document.querySelector('input[type="text"]').value;
+
+    navigator.clipboard.writeText(pass).then(() => {
+        document.querySelector('div.password button').innerHTML = 'copied!';
+        setTimeout(() => {
+            document.querySelector('div.password button').innerHTML = 'copy';
+        }, 1000);
+    });
+});
+
 
 
 generate();
