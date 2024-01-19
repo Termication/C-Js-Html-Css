@@ -90,5 +90,6 @@ div.options label{
     background-color: rgba(2,0,36,.2);
     padding: 8px;
     border-radius: 10px;
+    cursor: pointer;
 
 }
