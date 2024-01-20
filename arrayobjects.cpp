@@ -30,14 +30,13 @@ int main(){
     */
    int luckynumbers[5] = {1,4,5,2,10};
 
-   Student s1;
+   //Student s1;
 
-   s1.name = "Innocent";
+   /*s1.name = "Innocent";
    s1.age = 25;
    s1.gender = 'm';
-   s1.grade = 12;
+   s1.grade = 12;*/
 
-   Student students[3];
-   students[0] = s1;
+   Student students[3] = {{"innocent", 27, 'm', 12},{"Elon", 25, 'm', 10}, {"Kane", 10, 'm', 9}};
 
 }
