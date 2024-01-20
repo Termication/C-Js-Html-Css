@@ -3,10 +3,18 @@
 using namespace std;
 
 class Student{
+  public:
     string name;
     int age;
     char gender;
     float grade;
+
+    Student(string Name, int Age, char Gender, float Grade){
+        Name = name;
+        Age = age;
+        Gender = gender;
+        Grade = grade;
+    }
 };
 
 int main(){
