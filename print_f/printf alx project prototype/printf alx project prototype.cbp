@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="str" />
+		<Option title="printf alx project prototype" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/str" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/printf alx project prototype" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/str" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/printf alx project prototype" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,10 +32,6 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="main.h" />
-		<Unit filename="man2.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions />
