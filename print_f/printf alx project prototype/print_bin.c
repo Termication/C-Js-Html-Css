@@ -1,34 +1,35 @@
 #include "main.h"
 
 /**
- * print_bin - prints binary number.
- * @val: parameter.
- * Return: integer
+ * display_binary - Prints a binary number.
+ * @arguments: Parameter containing the decimal number to convert.
+ * Return: The number of characters printed.
  */
-int print_bin(va_list val)
+int display_binary(va_list arguments)
 {
 	int flag = 0;
-	int cont = 0;
-	int i, a = 1, b;
-	unsigned int num = va_arg(val, unsigned int);
-	unsigned int p;
+	int char_count = 0;
+	int index, bit;
+	unsigned int decimal_num = va_arg(arguments, unsigned int);
+	unsigned int mask;
 
-	for (i = 0; i < 32; i++)
+	for (index = 0; index < 32; index++)
 	{
-		p = ((a << (31 - i)) & num);
-		if (p >> (31 - i))
+		mask = ((1 << (31 - index)) & decimal_num);
+		if (mask >> (31 - index))
 			flag = 1;
 		if (flag)
 		{
-			b = p >> (31 - i);
-			_putchar(b + 48);
-			cont++;
+			bit = mask >> (31 - index);
+			_putchar(bit + '0');
+			char_count++;
 		}
 	}
-	if (cont == 0)
+	if (char_count == 0)
 	{
-		cont++;
+		char_count++;
 		_putchar('0');
 	}
-	return (cont);
+	return (char_count);
 }
+

@@ -1,11 +1,16 @@
 
 #ifndef MAIN_H
 #define MAIN_H
-#include <limits.h>
-#include <stdio.h>
+
 #include <stdarg.h>
-#include <stdlib.h>
+
+#include <limits.h>
+
 #include <unistd.h>
+
+#include <stdlib.h>
+
+#include <stdio.h>
 
 
 
@@ -18,31 +23,31 @@
 
 typedef struct format
 {
-	char *ph;
+	char *specifier;
 	int (*function)();
 } convert;
 
-int *_strcpy(char *dest, char *src);
-int print_pointer(va_list val);
-int print_unsigned(va_list args);
-int print_hex_extra(unsigned long int num);
-int _strlenc(const char *s);
-int print_HEX_extra(unsigned int num);
-int print_exc_string(va_list val);
-int print_HEX(va_list val);
-int print_hex(va_list val);
-int print_oct(va_list val);
-int print_bin(va_list val);
-int print_revs(va_list args);
-int print_rot13(va_list args);
-int print_i(va_list args);
-int print_d(va_list args);
-int _strlen(char *s);
-int rev_string(char *s);
-int print_37(void);
-int print_c(va_list val);
-int print_s(va_list val);
+int display_percent_char(void);
+int display_HEXadecimal(va_list args);
+int display_rot13_conversion(va_list arguments);
+int display_unsigned_integer(va_list arguments);
+int display_memory_address(va_list args);
+int display_hexadecimal(va_list arguments);
+int display_character(va_list arguments);
+int display_special_string(va_list arguments);
+int display_binary(va_list arguments);
+int display_octal(va_list args);
+int display_hexadecimal_extra(unsigned int decimal_num);
+int display_decimal(va_list args);
+int find_constant_string_length(const char *str);
+int find_string_length(char *str);
+int display_string(va_list arguments);
+int display_integer(va_list args);
+int display_hexadecimal_number(unsigned long int decimalNum);
+int display_reversed_string(va_list arguments);
+int display_character(va_list arguments);
 int _putchar(char c);
 int _printf(const char *format, ...);
 
 #endif
+

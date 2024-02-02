@@ -1,32 +1,32 @@
-
 #include "main.h"
 
 /**
- * print_pointer - prints an hexgecimal number.
- * @val: arguments.
- * Return: counter.
+ * display_memory_address - Prints the hexadecimal representation of a memory address.
+ * @args: Arguments containing the memory address to print.
+ * Return: Number of characters printed.
  */
-int print_pointer(va_list val)
+int display_memory_address(va_list args)
 {
-	void *p;
-	char *s = "(nil)";
-	long int x;
-	int y;
+	void *memory_address;
+	char *placeholder = "(nil)";
+	unsigned long int hex_value;
+	int character_count;
 	int i;
 
-	p = va_arg(val, void*);
-	if (p == NULL)
+	memory_address = va_arg(args, void*);
+
+	if (memory_address == NULL)
 	{
-		for (i = 0; s[i] != '\0'; i++)
+		for (i = 0; placeholder[i] != '\0'; i++)
 		{
-			_putchar(s[i]);
+			_putchar(placeholder[i]);
 		}
 		return (i);
 	}
 
-	x = (unsigned long int)p;
+	hex_value = (unsigned long int)memory_address;
 	_putchar('0');
 	_putchar('x');
-	y = print_hex_extra(x);
-	return (y + 2);
+	character_count = display_hexadecimal_number(hex_value);
+	return (character_count + 2);
 }

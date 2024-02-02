@@ -1,37 +1,37 @@
-
 #include "main.h"
 
 /**
- * print_hex_extra - prints an hexgecimal number.
- * @num: arguments.
- * Return: counter.
+ * display_hexadecimal_number - Displays a hexadecimal number.
+ * @decimalNum: Decimal number to convert and display.
+ * Return: Counter of characters printed.
  */
-int print_hex_extra(unsigned long int num)
+int display_hexadecimal_number(unsigned long int decimalNum)
 {
-	long int i;
-	long int *array;
-	long int counter = 0;
-	unsigned long int temp = num;
+    long int index;
+	long int *hexArray;
+	long int charCounter = 0;
+	unsigned long int temp = decimalNum;
 
-	while (num / 16 != 0)
+	while (decimalNum / 16 != 0)
 	{
-		num /= 16;
-		counter++;
+		decimalNum /= 16;
+		charCounter++;
 	}
-	counter++;
-	array = malloc(counter * sizeof(long int));
+	charCounter++;
+	hexArray = malloc(charCounter * sizeof(long int));
 
-	for (i = 0; i < counter; i++)
+	for (index = 0; index < charCounter; index++)
 	{
-		array[i] = temp % 16;
+		hexArray[index] = temp % 16;
 		temp = temp / 16;
 	}
-	for (i = counter - 1; i >= 0; i--)
+	for (index = charCounter - 1; index >= 0; index--)
 	{
-		if (array[i] > 9)
-			array[i] = array[i] + 39;
-		_putchar(array[i] + '0');
+		if (hexArray[index] > 9)
+			hexArray[index] = hexArray[index] + 39;
+		_putchar(hexArray[index] + '0');
 	}
-	free(array);
-	return (counter);
+	free(hexArray);
+	return (charCounter);
 }
+

@@ -1,38 +1,38 @@
 #include "main.h"
-/**
- * print_rot13 - convert to rot13
- * @args: printf arguments
- * Return: counter
- *
- */
-int print_rot13(va_list args)
-{
-	int i, j, counter = 0;
-	int k = 0;
-	char *s = va_arg(args, char*);
-	char al[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-	char bl[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
-	if (s == NULL)
-		s = "(null)";
-	for (i = 0; s[i]; i++)
+/**
+ * display_rot13_conversion - Converts a string to rot13 and prints it.
+ * @arguments: Printf arguments.
+ * Return: Counter of characters printed.
+ */
+int display_rot13_conversion(va_list arguments)
+{
+	int index_alphabet, index_rot13, char_counter = 0;
+	int found = 0;
+	char *input_string = va_arg(arguments, char*);
+	char alphabet[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+	char rot13[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
+
+	if (input_string == NULL)
+		input_string = "(null)";
+
+	for (index_alphabet = 0; input_string[index_alphabet]; index_alphabet++)
 	{
-		k = 0;
-		for (j = 0; al[j] && !k; j++)
+		found = 0;
+		for (index_rot13 = 0; alphabet[index_rot13] && !found; index_rot13++)
 		{
-			if (s[i] == al[j])
+			if (input_string[index_alphabet] == alphabet[index_rot13])
 			{
-				_putchar(bl[j]);
-				counter++;
-				k = 1;
+				_putchar(rot13[index_rot13]);
+				char_counter++;
+				found = 1;
 			}
 		}
-		if (!k)
+		if (!found)
 		{
-			_putchar(s[i]);
-			counter++;
+			_putchar(input_string[index_alphabet]);
+			char_counter++;
 		}
 	}
-	return (counter);
+	return (char_counter);
 }
-

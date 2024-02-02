@@ -1,36 +1,35 @@
-
 #include "main.h"
 
 /**
- * print_oct - prints an octal number.
- * @val: arguments.
- * Return: counter.
+ * display_octal - Displays an octal number.
+ * @args: Arguments containing the decimal number to convert.
+ * Return: Number of characters printed.
  */
-int print_oct(va_list val)
+int display_octal(va_list args)
 {
-	int i;
-	int *array;
-	int counter = 0;
-	unsigned int num = va_arg(val, unsigned int);
-	unsigned int tem = num;
+	int index;
+	int *octalArray;
+	int charCounter = 0;
+	unsigned int decimalNum = va_arg(args, unsigned int);
+	unsigned int temp = decimalNum;
 
-	while (num / 8 != 0)
+	while (decimalNum / 8 != 0)
 	{
-		num /= 8;
-		counter++;
+		decimalNum /= 8;
+		charCounter++;
 	}
-	counter++;
-	array = malloc(counter * sizeof(int));
+	charCounter++;
+	octalArray = malloc(charCounter * sizeof(int));
 
-	for (i = 0; i < counter; i++)
+	for (index = 0; index < charCounter; index++)
 	{
-		array[i] = tem % 8;
-		tem /= 8;
+		octalArray[index] = temp % 8;
+		temp /= 8;
 	}
-	for (i = counter - 1; i >= 0; i--)
+	for (index = charCounter - 1; index >= 0; index--)
 	{
-		_putchar(array[i] + '0');
+		_putchar(octalArray[index] + '0');
 	}
-	free(array);
-	return (counter);
+	free(octalArray);
+	return (charCounter);
 }

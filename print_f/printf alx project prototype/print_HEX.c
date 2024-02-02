@@ -1,38 +1,38 @@
-
 #include "main.h"
 
 /**
- * print_HEX - prints an hexgecimal number.
- * @val: arguments.
- * Return: counter.
+ * display_HEXadecimal - Prints the hexadecimal representation of a number.
+ * @args: Arguments containing the decimal number to convert.
+ * Return: Number of characters printed.
  */
-int print_HEX(va_list val)
+int display_HEXadecimal(va_list args)
 {
-	int i;
-	int *array;
-	int counter = 0;
-	unsigned int num = va_arg(val, unsigned int);
-	unsigned int tem = num;
+	int index;
+	int *hexArray;
+	int charCounter = 0;
+	unsigned int decimalNum = va_arg(args, unsigned int);
+	unsigned int temp = decimalNum;
 
-	while (num / 16 != 0)
+	while (decimalNum / 16 != 0)
 	{
-		num /= 16;
-		counter++;
+		decimalNum /= 16;
+		charCounter++;
 	}
-	counter++;
-	array = malloc(counter * sizeof(int));
+	charCounter++;
+	hexArray = malloc(charCounter * sizeof(int));
 
-	for (i = 0; i < counter; i++)
+	for (index = 0; index < charCounter; index++)
 	{
-		array[i] = tem % 16;
-		tem /= 16;
+		hexArray[index] = temp % 16;
+		temp /= 16;
 	}
-	for (i = counter - 1; i >= 0; i--)
+	for (index = charCounter - 1; index >= 0; index--)
 	{
-		if (array[i] > 9)
-			array[i] = array[i] + 7;
-		_putchar(array[i] + '0');
+		if (hexArray[index] > 9)
+			hexArray[index] = hexArray[index] + 7;
+		_putchar(hexArray[index] + '0');
 	}
-	free(array);
-	return (counter);
+	free(hexArray);
+	return (charCounter);
 }
+

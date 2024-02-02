@@ -2,45 +2,66 @@
 1706878160 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/_putchar.c
 	"main.h"
 
-1706878162 /home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/main.h
-	<limits.h>
-	<stdio.h>
+1706892443 /home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/main.h
 	<stdarg.h>
-	<stdlib.h>
+	<limits.h>
 	<unistd.h>
+	<stdlib.h>
+	<stdio.h>
 
 1706878162 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/main.c
 	<limits.h>
 	<stdio.h>
 	"main.h"
 
-1706878289 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_%.c
+1706882721 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_%.c
 	"main.h"
 
-1706878361 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_HEX.c
+1706883526 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_HEX.c
 	"main.h"
 
-1706878604 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_bin.c
+1706888692 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_bin.c
 	"main.h"
 
-1706878672 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_c.c
+1706888971 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_c.c
 	"main.h"
 
-1706878749 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_exc_string.c
+1706889216 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_exc_string.c
 	"main.h"
 
-1706878452 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_HEX_extra.c
+1706888488 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_HEX_extra.c
 	"main.h"
 
-1706878833 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_hex.c
+1706890207 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_hex.c
 	"main.h"
 
-1706878914 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_hex_extra.c
+1706883136 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_hex_extra.c
 	"main.h"
 
-1706879091 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_int.c
+1706884285 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_int.c
 	"main.h"
 
-1706879229 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_oct.c
+1706884938 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_oct.c
+	"main.h"
+
+1706890617 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/_printf.c
+	"main.h"
+
+1706885304 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_pointer.c
+	"main.h"
+
+1706885725 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_rot13.c
+	"main.h"
+
+1706890374 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_srev.c
+	"main.h"
+
+1706886322 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_str.c
+	"main.h"
+
+1706886946 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_string.c
+	"main.h"
+
+1706890573 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_uns.c
 	"main.h"
 

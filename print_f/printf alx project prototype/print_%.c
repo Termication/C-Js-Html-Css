@@ -1,10 +1,10 @@
-
 #include "main.h"
+
 /**
- * print_37 - prints the char %.
+ * display_percent_char - Displays the percentage symbol (%).
  * Return: 1.
  */
-int print_37(void)
+int display_percent_char(void)
 {
 	_putchar(37);
 	return (1);

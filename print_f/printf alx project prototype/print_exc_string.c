@@ -1,40 +1,44 @@
-
 #include "main.h"
+
 /**
- * print_exc_string - print exclusuives string.
- * @val: parameter.
- * Return: integer.
+ * display_special_string - Prints a string with special characters represented in hexadecimal.
+ * @arguments: Printf arguments containing the string to print.
+ * Return: The number of characters printed.
  */
-
-int print_exc_string(va_list val)
+int display_special_string(va_list arguments)
 {
-	char *s;
-	int i, length = 0;
-	int value;
+	char *input_str;
+	int index, length = 0;
+	int char_value;
 
-	s = va_arg(val, char *);
-	if (s == NULL)
-		s = "(null)";
-	for (i = 0; s[i] != '\0'; i++)
+	input_str = va_arg(arguments, char*);
+
+	if (input_str == NULL)
+		input_str = "(null)";
+
+	for (index = 0; input_str[index] != '\0'; index++)
 	{
-		if (s[i] < 32 || s[i] >= 127)
+		if (input_str[index] < 32 || input_str[index] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
-			length = length + 2;
-			value = s[i];
-			if (value < 16)
+			length += 2;
+			char_value = input_str[index];
+
+			if (char_value < 16)
 			{
 				_putchar('0');
 				length++;
 			}
-			length = length + print_HEX_extra(value);
+
+			length += display_hexadecimal_extra(char_value);
 		}
 		else
 		{
-			_putchar(s[i]);
+			_putchar(input_str[index]);
 			length++;
 		}
 	}
 	return (length);
 }
+
