@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1706878160 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/_putchar.c
+	"main.h"
+
+1706878162 /home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/main.h
+	<limits.h>
+	<stdio.h>
+	<stdarg.h>
+	<stdlib.h>
+	<unistd.h>
+
+1706878162 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/main.c
+	<limits.h>
+	<stdio.h>
+	"main.h"
+
+1706878289 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_%.c
+	"main.h"
+
+1706878361 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_HEX.c
+	"main.h"
+
+1706878604 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_bin.c
+	"main.h"
+
+1706878672 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_c.c
+	"main.h"
+
+1706878749 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_exc_string.c
+	"main.h"
+
+1706878452 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_HEX_extra.c
+	"main.h"
+
+1706878833 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_hex.c
+	"main.h"
+
+1706878914 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_hex_extra.c
+	"main.h"
+
+1706879091 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_int.c
+	"main.h"
+
+1706879229 source:/home/innocent/Documents/CODE/C-Js-Html-Css/print_f/printf alx project prototype/print_oct.c
+	"main.h"
+
