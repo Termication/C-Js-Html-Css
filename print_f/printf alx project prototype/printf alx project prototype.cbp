@@ -31,7 +31,62 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="_printf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="_putchar.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.h" />
+		<Unit filename="print_%.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_HEX.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_HEX_extra.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_bin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_exc_string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_hex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_hex_extra.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_int.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_oct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_pointer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_rot13.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_srev.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_str.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="print_uns.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions />

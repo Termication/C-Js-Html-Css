@@ -1,4 +1,4 @@
-r#include <iostream>
+#include <iostream>
 #include <cmath>
 #include <cstdlib> // for rand() function
 #include <ctime>   // for time() function
