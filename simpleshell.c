@@ -58,6 +58,7 @@ int main() {
             // Execute each command
             execute_command(token);
             token = strtok(NULL, ";");
+            
         }
     }
 
