@@ -9,7 +9,7 @@ let bitSpeed = document.getElementById("bits");
 let totalBitSpeed = 0;
 let totalKbSpeed = 0;
 let totalMbSpeed = 0;
-let numTests = 0;
+let numTests = 1;
 let testCompleted = 0;
 
 let imageApi = "https://source.unsplash.com/random?topic=nature";
@@ -62,3 +62,15 @@ function calculateSpeed(){
     }
 
 }
+
+const init = async() =>{
+    info.innerHTML = "Testing...."
+    startTime = new Date().getTime();
+    image.src = imageApi;
+};
+
+window.onload = () =>{
+    for(let i = 0; i < numTests; i++){
+        init();
+    }
+};
