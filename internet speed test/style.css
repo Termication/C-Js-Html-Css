@@ -31,3 +31,12 @@ body{
 .container img{
     width: 100%;
 }
+
+p{
+    font-weight: 400;
+    color: blue;
+}
+span{
+    font-weight: 400;
+    color: darkblue;
+}
