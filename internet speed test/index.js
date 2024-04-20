@@ -44,5 +44,21 @@ function calculateSpeed(){
 
     testCompleted++;
 
-    
+
+    if(testCompleted === numTests){
+        let averageSpeedInBps = (totalBitSpeed / numTests).toFixed(2);
+        let averageSpeedInKbps = (totalKbSpeed / numTests).toFixed(2);
+        let averageSpeedInMbs = (totalMbSpeed / numTests).toFixed(2);
+
+        //display average speeds
+        bitSpeed.innerHTML += `${averageSpeedInBps}`;
+        kbSpeed.innerHTML += `${averageSpeedInKbps}`;
+        mbSpeed.innerHTML += `${averageSpeedInMbs}`;
+        info.innerHTML = "Test Completed!";
+    }else{
+        //run the next test
+        startTime = new Date().getTime();
+        image.src = imageApi;
+    }
+
 }
