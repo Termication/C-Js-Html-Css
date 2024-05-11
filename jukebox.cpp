@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <filesystem>
-#include <fstream>
+#include <SDL2/SDL.h>
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -14,7 +14,7 @@ private:
 
 public:
     // Load songs from a specified folder
-    void loadSongs(const string& folderPath) {
+    void listSongs(const string& folderPath) {
         for (const auto& entry : fs::directory_iterator(folderPath)) {
             if (entry.is_regular_file()) {
                 songTitles.push_back(entry.path().filename().string());
@@ -24,7 +24,7 @@ public:
     }
 
     // List all loaded songs
-    void listSongs() {
+    void printSongs() {
         if (songTitles.empty()) {
             cout << "No songs loaded." << endl;
         } else {
@@ -37,22 +37,39 @@ public:
 
     // Play a song
     void playSong(const string& songTitle) {
-        string filePath = "./" + songTitle;
-        ifstream file(filePath);
-        if (file) {
-            cout << "Playing " << songTitle << "..." << endl;
-            // Here you can add code to play the song using a suitable library
-        } else {
-            cout << "Song \"" << songTitle << "\" not found." << endl;
+        string filePath = "/home/innocent/Music/empire cast" + songTitle;
+        if (SDL_Init(SDL_INIT_AUDIO) < 0) {
+            cout << "SDL initialization failed: " << SDL_GetError() << endl;
+            return;
         }
+        SDL_AudioSpec wavSpec;
+        Uint32 wavLength;
+        Uint8 *wavBuffer;
+        if (SDL_LoadWAV(filePath.c_str(), &wavSpec, &wavBuffer, &wavLength) == NULL) {
+            cout << "Error loading WAV file: " << SDL_GetError() << endl;
+            return;
+        }
+        SDL_AudioDeviceID deviceId = SDL_OpenAudioDevice(NULL, 0, &wavSpec, NULL, 0);
+        if (deviceId == 0) {
+            cout << "Failed to open audio device: " << SDL_GetError() << endl;
+            SDL_FreeWAV(wavBuffer);
+            SDL_Quit();
+            return;
+        }
+        SDL_PauseAudioDevice(deviceId, 0);
+        SDL_QueueAudio(deviceId, wavBuffer, wavLength);
+        SDL_Delay((wavLength / wavSpec.freq) * 1000);
+        SDL_CloseAudioDevice(deviceId);
+        SDL_FreeWAV(wavBuffer);
+        SDL_Quit();
     }
 };
 
 int main() {
     Jukebox jukebox;
 
-    // Load songs from a folder
-    jukebox.loadSongs("/home/innocent/Music/empirecast");
+    // Load songs from the specified folder
+    jukebox.listSongs("/home/innocent/Music/empire cast");
 
     // Menu loop
     int choice;
@@ -66,13 +83,12 @@ int main() {
 
         switch (choice) {
             case 1:
-                jukebox.listSongs();
+                jukebox.printSongs();
                 break;
             case 2: {
                 string title;
                 cout << "Enter song title to play: ";
-                cin.ignore();
-                getline(cin, title);
+                cin >> title;
                 jukebox.playSong(title);
                 break;
             }
